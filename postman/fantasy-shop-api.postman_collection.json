@@ -1,0 +1,641 @@
+{
+	"info": {
+		"_postman_id": "4a664efb-8475-4f74-85a1-8108bb7ded52",
+		"name": "fantasy-shop-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24495435"
+	},
+	"item": [
+		{
+			"name": "item shop",
+			"item": [
+				{
+					"name": "get items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/item-shop?name=&description=&page=2&size=3",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"item-shop"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "description",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "size",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1/item-shop",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"item-shop"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2024 07:28:24 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "929"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Sword\",\n        \"description\": \"A sword that can be used to fight enemies.\",\n        \"picture\": \"https://i.pinimg.com/736x/73/cc/79/73cc79391b764ec40a5c77052bb846b9.jpg\",\n        \"price\": 100\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Shield\",\n        \"description\": \"A shield that can be used to block enemy attacks.\",\n        \"picture\": \"https://i.pinimg.com/736x/fe/83/27/fe832717d33f05c2dbd845809ce877b8.jpg\",\n        \"price\": 50\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Potion\",\n        \"description\": \"A potion that can be used to heal wounds.\",\n        \"picture\": \"https://i.pinimg.com/564x/14/7e/7d/147e7d58fa2becce0045f3aadf1808b1.jpg\",\n        \"price\": 30\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Bow\",\n        \"description\": \"A bow that can be used to shoot enemies from afar.\",\n        \"picture\": \"https://i.pinimg.com/564x/1f/91/72/1f9172f5bc27094c4e167e55f8cce2f2.jpg\",\n        \"price\": 80\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Arrow\",\n        \"description\": \"An arrow that can be used with a bow to shoot enemies from afar.\",\n        \"picture\": \"https://i.pinimg.com/564x/3f/25/84/3f25842cb4a8ad53a19575cc3d25c844.jpg\",\n        \"price\": 10\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "buy item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"itemID\": 2,\r\n    \"quantity\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/item-shop/buy",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"item-shop",
+								"buy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sell item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"itemID\": 2,\r\n    \"quantity\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/item-shop/sell",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"item-shop",
+								"sell"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 -ok",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"itemID\": 2,\r\n    \"quantity\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/item-shop/sell",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"item-shop",
+										"sell"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 14 May 2024 08:24:28 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "103"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 7,\n    \"playerID\": \"110000303371382667110\",\n    \"amount\": 50,\n    \"createdAt\": \"2024-05-14T15:24:28.958987+07:00\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "item managing",
+			"item": [
+				{
+					"name": "create item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Test potion\",\r\n    \"description\": \"test desc\",\r\n    \"price\": 33,\r\n    \"picture\": \"https//picture.com/test-potion.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/item-managing",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"item-managing"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "201 - created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Test shield\",\r\n    \"description\": \"test desc\",\r\n    \"price\": 40,\r\n    \"picture\": \"https//picture.com/test-shield.png\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/item-managing",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"item-managing"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2024 12:46:22 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "114"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 7,\n    \"name\": \"Test shield\",\n    \"description\": \"test desc\",\n    \"picture\": \"https//picture.com/test-shield.png\",\n    \"price\": 40\n}"
+						}
+					]
+				},
+				{
+					"name": "edit item",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Edited shield\",\r\n    \"price\": 90\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/item-managing/:itemID",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"item-managing",
+								":itemID"
+							],
+							"variable": [
+								{
+									"key": "itemID",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - ok",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Edited shield\",\r\n    \"price\": 90\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/item-managing/:itemID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"item-managing",
+										":itemID"
+									],
+									"variable": [
+										{
+											"key": "itemID",
+											"value": "7"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2024 12:47:05 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "116"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 7,\n    \"name\": \"Edited shield\",\n    \"description\": \"test desc\",\n    \"picture\": \"https//picture.com/test-shield.png\",\n    \"price\": 90\n}"
+						}
+					]
+				},
+				{
+					"name": "archive item",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/item-managing/:itemID",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"item-managing",
+								":itemID"
+							],
+							"variable": [
+								{
+									"key": "itemID",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "204 - no content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/item-managing/:itemID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"item-managing",
+										":itemID"
+									],
+									"variable": [
+										{
+											"key": "itemID",
+											"value": "6"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 May 2024 12:45:43 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "oauth2",
+			"item": [
+				{
+					"name": "logout",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/oauth2/google/logout",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"oauth2",
+								"google",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "player coin",
+			"item": [
+				{
+					"name": "add coin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 4000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/player-coin",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"player-coin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show coin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/player-coin",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"player-coin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "inventory",
+			"item": [
+				{
+					"name": "get inventory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/inventory",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"inventory"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "health check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/v1/health",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"health"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 -  ok",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/health",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"health"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=UTF-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 13 May 2024 07:30:10 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2"
+						}
+					],
+					"cookie": [],
+					"body": "OK"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
